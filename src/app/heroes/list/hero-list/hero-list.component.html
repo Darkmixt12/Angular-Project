@@ -1,0 +1,22 @@
+<p> <strong> ngFOR  </strong>= es basicamente un ciclo for pero para el temple, nos va a permitir hacer una duplicidad
+    de elementos </p>
+<hr>
+
+<h3>Listado de Heroes</h3>
+
+<div *ngIf="heroDeleted; else nothingWasDeeted">
+    <h3>Heroe Borrado! <small class="text-danger"> Has borrado a: {{heroDeleted}} </small></h3>
+</div> 
+
+<ng-template #nothingWasDeeted>
+    <h3>No has borrado a ningun heroe!</h3>
+</ng-template>
+
+
+<button *ngIf="heroNames.length > 0" (click)="removeLastHero()" class="btn btn-outline-danger"> Borrar Ultimo Heroe </button>
+
+
+<ul class="mt-2 list-group">
+        <li *ngFor="let name of heroNames" class="list-group-item"> {{name}} </li>
+
+</ul>
