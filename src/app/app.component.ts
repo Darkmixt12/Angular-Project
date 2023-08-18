@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Aprendiendo Angular';
+
 }
+//? cada uno de los componentes esta relacionado entre si porl o que podemos hacer referencias entre HTML y TS
+//? Tarea funcionalidad de boton de menos recibir argumento  
